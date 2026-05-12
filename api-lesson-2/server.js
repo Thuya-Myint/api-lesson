@@ -17,9 +17,10 @@ app.use(express.json())
 app.use(compression())
 app.use(urlencoded({ extended: true }))
 
-app.get("/", (req, res) => res.status(200).json({
-  message: "Hello, world!"
-}))
+app.get("/", (req, res) => {
+  console.log(req)
+  res.status(200).json({ "message": "hello" })
+})
 
 
 
