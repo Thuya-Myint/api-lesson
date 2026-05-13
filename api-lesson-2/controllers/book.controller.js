@@ -2,6 +2,7 @@ import { createBook, getAllBook } from "../services/book.service.js"
 
 export const getAllBookController = async (req, res) => {
   try {
+    console.log("reqheader", req.headers)
     const data = await getAllBook()
     res.status(200).json({
       success: true,
