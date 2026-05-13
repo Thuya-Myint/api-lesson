@@ -22,6 +22,7 @@ app.use(express.json())
 app.use(compression())
 app.use(urlencoded({ extended: true }))
 app.use("/api/v1", routes)
+app.disable("X-Powered-By`")
 
 
 try {
